@@ -10,11 +10,18 @@ class UsersSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
+        \App\User::create([
         	'nama' => 'admin',
         	'username' => 'admin',
             'password' => bcrypt('admin'),
             'level'=> 'admin'
+        ]);
+        \App\User::create([
+        	'nama' => 'kasir',
+        	'username' => 'kasir',
+            'password' => 
+            bcrypt('kasir'),
+            'level'=> 'kasir'
         ]);
     }
 }

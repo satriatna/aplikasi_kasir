@@ -67,8 +67,7 @@ class TransaksiOrderController extends Controller
         
 
         $ambil = DB::table('tb_order')->where('user_order_id',Auth::user()->id)->where('status_order','sedang_dipesan')->get();
-        $order = DB::table('tb_order')->where('id_order', \DB::raw("(select max(`id_order`) from tb_order)"))
-        ->where('user_order_id',Auth::user()->id)->first();
+        $order = DB::table('tb_order')->where('id_order', \DB::raw("(select max(`id_order`) from tb_order)"))->where('user_order_id',Auth::user()->id)->first();
             
         foreach($ambil as $a)
         {
