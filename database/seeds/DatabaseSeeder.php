@@ -14,12 +14,14 @@ class DatabaseSeeder extends Seeder
         \App\User::create([
         	'nama' => 'admin',
         	'username' => 'admin',
+        	'email' => 'admin@gmail.com',
             'password' => bcrypt('admin'),
             'level'=> 'admin'
         ]);
         \App\User::create([
         	'nama' => 'kasir',
         	'username' => 'kasir',
+        	'email' => 'kasir@gmail.com',
             'password' => bcrypt('kasir'),
             'level'=> 'kasir'
         ]);
